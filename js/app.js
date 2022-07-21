@@ -51,7 +51,7 @@ function Shop(city, min, max, avg) {
     let totalLi = document.createElement('li');
     totalLi.textContent = `Total: ${this.dailyTotal} cookies`;
     seattleList.appendChild(totalLi);
-  }
+  };
 
 }
 
