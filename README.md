@@ -6,8 +6,11 @@ This web app is a storefront for a cafe selling unique salmon shaped (and flavor
 
 ### Links and Resources
 
-  -Problem Domain for Lab - 06
-
+  -Assignment Overviews
+    -[Lab06: Objects](https://codefellows.github.io/code-201-guide/curriculum/class-06/lab/)
+    -[Lab07: Constructor Funct & Tables](https://codefellows.github.io/code-201-guide/curriculum/class-07/lab/)
+    -[Lab08a: HTML/CSS Wirefram](https://codefellows.github.io/code-201-guide/curriculum/class-08/lab-a/)
+    -[lab08b](https://codefellows.github.io/code-201-guide/curriculum/class-08/lab-b/)
   -MDN:Object Basics
 
   -MDN:Intro to DOM
