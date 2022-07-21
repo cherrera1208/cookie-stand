@@ -21,22 +21,41 @@ function Shop(city, min, max, avg) {
       this.dailyTotal += cookiesSold;
     }
   };
+  // this.render = function () {
+  //   this.cookiesByHour();
+  //   let cookieTable = document.getElementById('tableOfSales');
+  //   let tRow = document.createElement('tr');
+  //   cookieTable.appendChild(tRow);
+  //   let rowCity = document.createElement('td');
+  //   rowCity.textContent = this.name;
+  //   tRow.appendChild(rowCity);
+  //   for (let i = 0; i < hourArr.length; i++) {
+  //     let rowSales = document.createElement('td');
+  //     rowSales.textContent = this.cookies[i];
+  //     tRow.appendChild(rowSales);
+  //   }
+  //   let rowTotal = document.createElement('td');
+  //   rowTotal.textContent = this.dailyTotal;
+  //   tRow.appendChild(rowTotal);
+  // };
+
+  // non construct render
   this.render = function () {
-    let cookieList = document.getElementById('cookiesSoldList');
+    let seattleList = document.getElementById('seattleSales');
     this.cookiesByHour();
     for (let i = 0; i < hourArr.length; i++) {
-      let listHead = document.createElement('h3');
-      listHead.textDocument = this.name;
-      cookieList.appendChild(listHead);
       let listItem = document.createElement('li');
       listItem.textContent = (`${hourArr[i]}: ${this.cookieArr[i]} cookies`);
-      cookieList.appendChild(listItem);
+      seattleList.appendChild(listItem);
     }
     let totalLi = document.createElement('li');
     totalLi.textContent = `Total: ${this.dailyTotal} cookies`;
-    cookieList.appendChild(totalLi);
-  };
+    seattleList.appendChild(totalLi);
+  }
+
 }
+
+
 
 // //New Instances
 let seattle = new Shop('Seattle', 23, 65, 6.3);
