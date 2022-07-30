@@ -34,10 +34,10 @@ function Shop(city, min, max, avg) {
       let rowSales = document.createElement('td');
       rowSales.textContent = this.cookieArray[i];
       tableRow.appendChild(rowSales);
-      let cityDailyTotal = document.createElement('td');
-      cityDailyTotal.textContent = this.total;
-      tableRow.appendChild(cityDailyTotal);
     }
+    let cityDailyTotal = document.createElement('td');
+    cityDailyTotal.textContent = this.total;
+    tableRow.appendChild(cityDailyTotal);
   };
 }
 
@@ -53,6 +53,18 @@ dubai.render();
 paris.render();
 lima.render();
 
+let header = document.querySelector('thead');
+let headerRow = document.createElement('tr');
+header.appendChild(headerRow);
+let hoursRow = document.createElement('td');
+hoursRow.textContent = 'Store Hours';
+headerRow.appendChild(hoursRow);
+for (let i = 0; i < hours.length; i++) {
+  let hoursHeader = document.createElement('td');
+  hoursHeader.textContent = hours[i];
+  headerRow.appendChild(hoursHeader);
+}
+
 let footer = document.querySelector('tfoot');
 let totalsRow = document.createElement('tr');
 footer.appendChild(totalsRow);
@@ -66,23 +78,10 @@ for (let i = 0; i < hours.length; i++) {
   totalsRow.appendChild(hourlyTotals);
 }
 
+let totals = document.createElement('td');
+totals.textContent = 'Daily Totals';
+headerRow.appendChild(totals);
+
 let grandTotals = document.createElement('td');
 grandTotals.textContent = seattle.total + tokyo.total + dubai.total + paris.total + lima.total;
 totalsRow.appendChild(grandTotals);
-
-let header = document.querySelector('thead');
-let hoursTableHeader = document.createElement('tr');
-header.appendChild(hoursTableHeader);
-let hoursRow = document.createElement('td');
-hoursRow.textContent = 'Store Hours';
-hoursTableHeader.appendChild(hoursRow);
-
-for (let i = 0; i < hours.length; i++) {
-  let storeHours = document.createElement('td');
-  storeHours.textContent = hours[i];
-  hoursTableHeader.appendChild(storeHours);
-}
-
-let dailyTotals = document.createElement('td');
-dailyTotals.textContent = 'Daily Totals';
-hoursTableHeader.appendChild(dailyTotals);
