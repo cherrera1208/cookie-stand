@@ -1,3 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: chartreuse;
+  margin: 1rem;;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#brandLogo {
+  background-color: yellow;
+  width: 22%;
+  padding: .25rem;
+  display: flex;
+  justify-content: space-around;
+  align-content:center;
+}
+
+#navLinks {
+  width: 40%;
+  padding: .25rem;
+  background-color: orange;
+}
+
+img {
+  border: 1px solid red;
+  align-self: center;
+}
+
+h1 {
+  display: inline;
+  border: 1px solid red;
+  align-self: center;
+}
+
+.links {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  align-content: center;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#merch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sales {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main {
+  background-color: salmon;
+  margin: 1rem;;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#storeBio p{
+  padding: 1rem;
+}
+
+#subContent {
+  display: flex;
+  justify-content: space-evenly;
+}
+#locations ul{
+  padding: .5rem;
+}
+
+#locations li {
+  padding: .2rem;
+}
+
+#storeHours p {
+  padding: 1rem ;
+}
+
+#contactUs p {
+  padding: 1rem;
+}
 table, td {
   border: 1px solid black;
 }
