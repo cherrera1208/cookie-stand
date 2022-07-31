@@ -2,20 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <title>Salmon Cookies Sales</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <p>
+  <main id="salesPage">
     <a href="index.html">HOMEPAGE</a>
-  </p>
-  <table>
-    <thead></thead>
-    <tbody></tbody>
-    <tfoot></tfoot>
-  </table>
-   <script src="js/app.js"></script>
+    <table>
+      <thead></thead>
+      <tbody></tbody>
+      <tfoot></tfoot>
+    </table>
+    <div id="form">
+      <form>
+        <fieldset>
+          <legend>Add City</legend><br>
+          <label> City: </label><br>
+            <input type="text" placeholder="New City" name="city"><br>
+          <label> Min Sold: </label><br>
+            <input type="number" placeholder="Min Cookies Sold" name="min"><br>
+          <label> Max Sold: </label><br>
+            <input type="number" placeholder="Max Cookies Sold" name="max"><br>
+          <label> Avg Sold: </label><br>
+            <input type="number" placeholder="Avg Cookies Sold"name="avg"><br><br>
+          <button type="submit">Add</button>
+        </fieldset>
+      </form>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+  <script src="js/app.js"></script>
 </body>
 </html>

@@ -69,9 +69,8 @@ let footer = document.querySelector('tfoot');
 let totalsRow = document.createElement('tr');
 footer.appendChild(totalsRow);
 let totalsLabel = document.createElement('td');
-totalsLabel.textContent = 'Hourly Totals';
+totalsLabel.textContent = 'Hourly Tot.';
 totalsRow.appendChild(totalsLabel);
-
 for (let i = 0; i < hours.length; i++) {
   let hourlyTotals = document.createElement('td');
   hourlyTotals.textContent = seattle.cookieArray[i] + tokyo.cookieArray[i] + dubai.cookieArray[i] + paris.cookieArray[i] + lima.cookieArray[i];
@@ -79,9 +78,25 @@ for (let i = 0; i < hours.length; i++) {
 }
 
 let totals = document.createElement('td');
-totals.textContent = 'Daily Totals';
+totals.textContent = 'Daily Tot.';
 headerRow.appendChild(totals);
 
 let grandTotals = document.createElement('td');
 grandTotals.textContent = seattle.total + tokyo.total + dubai.total + paris.total + lima.total;
 totalsRow.appendChild(grandTotals);
+
+let form = document.querySelector('form');
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let newCity = new Shop(
+    event.target.city.value,
+    parseInt(event.target.min.value),
+    parseInt(event.target.max.value),
+    parseInt(event.target.avg.value)
+  );
+  newCity.render();
+  footer();
+}
+
+form.addEventListener('submit', handleSubmit);
